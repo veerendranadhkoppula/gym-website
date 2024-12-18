@@ -1,0 +1,100 @@
+body {
+    margin: 0;
+    font-family: "Arial", sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+  
+  .navbar {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+  }
+  
+  .diet-plan-form {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .form-heading {
+    text-align: center;
+    color: red;
+    margin-bottom: 20px;
+    font-size: 28px;
+  }
+  
+  .section-heading {
+    color: red;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+  
+  .input-group {
+    margin-bottom: 15px;
+  }
+  
+  .input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .input-group input,
+  .input-group select,
+  .input-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .input-group textarea {
+    resize: none;
+    height: 80px;
+  }
+  
+  .submit-button {
+    width: 100%;
+    padding: 15px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+  }
+  
+  .submit-button:hover {
+    background-color: red;
+  }
+  
+  .footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 10px;
+    background-color: black;
+    color: white;
+  }
+  
+  @media (max-width: 768px) {
+    .diet-plan-form {
+      padding: 10px;
+    }
+  
+    .form-heading {
+      font-size: 24px;
+    }
+  
+    .section-heading {
+      font-size: 18px;
+    }
+  
+    .submit-button {
+      font-size: 14px;
+    }
+  }
+  

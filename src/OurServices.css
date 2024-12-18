@@ -1,0 +1,52 @@
+/* General Styles */
+.services-container {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .services-heading {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  .services-description {
+    font-size: 16px;
+    margin-bottom: 30px;
+    color: #666;
+  }
+  
+  /* Services Images Section */
+  .services-images {
+    display: flex;  /* This ensures images are aligned in a row */
+    justify-content: center;
+    gap: 20px;  /* Space between images */
+    flex-wrap: no-wrap;  /* Prevent images from wrapping */
+  }
+  
+  .gym-image {
+    width: 200px;  /* Fixed width for the images */
+    height: 200px;  /* Fixed height for the images */
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media (max-width: 768px) {
+    .services-images {
+      flex-wrap: wrap;  /* Allow wrapping on smaller screens */
+      justify-content: space-between;  /* Distribute images more evenly */
+    }
+  
+    .gym-image {
+      width: 48%;  /* Make the images smaller on medium screens */
+      height: auto;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .gym-image {
+      width: 100%;  /* Make images full width on small screens */
+      height: auto;
+    }
+  }
+  

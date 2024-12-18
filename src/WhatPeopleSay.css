@@ -1,0 +1,135 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #000; /* Black background */
+  color: #fff; /* White text for visibility */
+}
+
+/* Heading Section */
+.heading-section {
+  text-align: center;
+  padding: 40px;
+}
+
+.heading {
+  font-size: 36px;
+  text-transform: uppercase;
+  color: red; /* Red heading color */
+}
+
+/* Cards Section */
+.cards-section {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.card {
+  background-color: #333; /* Dark gray card background */
+  width: 200px;
+  margin: 0 10px;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+.card-image {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.card-content {
+  margin-top: 10px;
+}
+
+.stars {
+  color: gold;
+}
+
+.card-text {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+/* Find Nearest Gym Section */
+.find-gym {
+  margin-top: 60px;
+  padding: 0 20px;
+}
+
+.find-gym-heading {
+  text-align: center;
+  color: red;
+  font-size: 28px;
+}
+
+.find-gym-description {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 16px;
+  color: #fff;
+}
+
+.gym-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.gym-card {
+  background-color: #333;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+.gym-image {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.gym-info h4 {
+  font-size: 16px;
+  margin-bottom: 5px;
+  color: #fff;
+}
+
+.gym-info p {
+  font-size: 14px;
+  color: #fff;
+}
+
+/* Map Section */
+.map-container {
+  margin-top: 40px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+iframe {
+  border-radius: 10px;
+  border: none;
+  width: 100%;
+  height: 400px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .cards-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .gym-list {
+    grid-template-columns: 1fr;
+  }
+}
