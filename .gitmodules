@@ -1,0 +1,3 @@
+[submodule "gymfluencer"]
+	path = gymfluencer
+	url = https://github.com/veerendranadhkoppula/gym-website.git
