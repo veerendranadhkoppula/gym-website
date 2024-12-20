@@ -41,7 +41,7 @@ const WhatPeopleSay = () => {
       </div>
 
       {/* Cards Section */}
-      <div className="cards-section" >
+      <div className="cards-section">
         <div className="card">
           <img src="/assets/people.jpeg" alt="Person 1" className="card-image" />
           <div className="card-content">
@@ -70,31 +70,30 @@ const WhatPeopleSay = () => {
         </p>
 
         <div className="gym-list">
-          <div className="gym-cards">
-            {gyms.map((gym) => (
-              <div key={gym.id} className="gym-card">
-                <img src={gym.image} alt={gym.name} className="gym-image" />
-                <div className="gym-info">
-                  <h4>{gym.name}</h4>
-                  <p>{gym.phone}</p>
-                  <p>{gym.location}</p>
-                </div>
+          {gyms.map((gym) => (
+            <div key={gym.id} className="gym-card">
+              <img src={gym.image} alt={gym.name} className="gym-image" />
+              <div className="gym-info">
+                <h4>{gym.name}</h4>
+                <p>{gym.phone}</p>
+                <p>{gym.location}</p>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
+        </div>
 
-          <div className="map-container">
-            <iframe
-              src="https://maps.google.com/maps?q=New%20York%20NY&t=&z=13&ie=UTF8&iwloc=&output=embed"
-              width="100%"
-              height="400"
-              frameBorder="0"
-              style={{ border: 0 }}
-              allowFullScreen=""
-              aria-hidden="false"
-              tabIndex="0"
-            ></iframe>
-          </div>
+        {/* Map Section */}
+        <div className="map-container">
+          <iframe
+            src="https://maps.google.com/maps?q=New%20York%20NY&t=&z=13&ie=UTF8&iwloc=&output=embed"
+            width="100%"
+            height="400"
+            frameBorder="0"
+            style={{ border: 0 }}
+            allowFullScreen=""
+            aria-hidden="false"
+            tabIndex="0"
+          ></iframe>
         </div>
       </div>
     </div>

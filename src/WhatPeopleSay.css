@@ -93,7 +93,7 @@ body {
 .gym-image {
   width: 100%;
   height: 120px;
-  object-fit: cover;
+  object-fit: cover; /* Ensure image fits the container */
   border-radius: 10px;
 }
 
