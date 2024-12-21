@@ -15,6 +15,11 @@ const DietPlanForm = () => {
     nutritional_needs: "",
     daily_diet: "",
     eating_out_frequency: "",
+    machine_name: "",
+    machine_weight: "",
+    body_structure: "",
+    exercise_machine: "",
+    rep_count: "",
   });
 
   // Handle input changes
@@ -28,6 +33,7 @@ const DietPlanForm = () => {
   // Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log(formData); // Check the formData to ensure the workout fields are included
     try {
       const response = await axios.post(
         "http://127.0.0.1:8000/api/diet-plan/",
@@ -37,7 +43,12 @@ const DietPlanForm = () => {
       console.log(response.data);
     } catch (error) {
       console.error("Error submitting form:", error);
-      alert("Failed to submit the form.");
+      // Check if there's a response error from the backend
+      if (error.response) {
+        alert(`Error: ${error.response.data.detail || 'Failed to submit form.'}`);
+      } else {
+        alert("Failed to submit the form.");
+      }
     }
   };
 
@@ -50,6 +61,7 @@ const DietPlanForm = () => {
       <form className="form-container" onSubmit={handleSubmit}>
         <h1 className="form-heading">Personalized Diet Plan</h1>
 
+        {/* Basic Information Section */}
         <h2 className="section-heading">Basic Information</h2>
         <div className="input-group">
           <label>Age</label>
@@ -108,6 +120,7 @@ const DietPlanForm = () => {
           </select>
         </div>
 
+        {/* Diet Goals Section */}
         <h2 className="section-heading">Diet Goals</h2>
         <div className="input-group">
           <label>Goal</label>
@@ -133,6 +146,7 @@ const DietPlanForm = () => {
           />
         </div>
 
+        {/* Health Information Section */}
         <h2 className="section-heading">Health Information</h2>
         <div className="input-group">
           <label>Medical Conditions</label>
@@ -153,6 +167,7 @@ const DietPlanForm = () => {
           />
         </div>
 
+        {/* Current Eating Habits Section */}
         <h2 className="section-heading">Current Eating Habits</h2>
         <div className="input-group">
           <label>Typical Daily Diet</label>
@@ -171,6 +186,59 @@ const DietPlanForm = () => {
             value={formData.eating_out_frequency}
             onChange={handleChange}
             placeholder="How often do you eat out? (e.g., 3 times a week)"
+          />
+        </div>
+
+        {/* Workout Details Section */}
+        <h2 className="section-heading">Workout Details</h2>
+        <div className="input-group">
+          <label>Machine Name</label>
+          <input
+            type="text"
+            name="machine_name"
+            value={formData.machine_name}
+            onChange={handleChange}
+            placeholder="Enter machine name"
+          />
+        </div>
+        <div className="input-group">
+          <label>Machine Weight (kg)</label>
+          <input
+            type="number"
+            name="machine_weight"
+            value={formData.machine_weight}
+            onChange={handleChange}
+            placeholder="Enter machine weight"
+          />
+        </div>
+        <div className="input-group">
+          <label>Body Structure</label>
+          <input
+            type="text"
+            name="body_structure"
+            value={formData.body_structure}
+            onChange={handleChange}
+            placeholder="Describe your body structure"
+          />
+        </div>
+        <div className="input-group">
+          <label>Exercise Machine</label>
+          <input
+            type="text"
+            name="exercise_machine"
+            value={formData.exercise_machine}
+            onChange={handleChange}
+            placeholder="Enter the exercise machine"
+          />
+        </div>
+        <div className="input-group">
+          <label>Rep Count</label>
+          <input
+            type="number"
+            name="rep_count"
+            value={formData.rep_count}
+            onChange={handleChange}
+            placeholder="Enter rep count"
           />
         </div>
 
